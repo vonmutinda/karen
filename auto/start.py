@@ -8,3 +8,13 @@
 # 3. load updates ahead of time 
 
 # 4. resume last action
+import urllib.request as request
+
+" Check if there's an internet connection"
+def is_connected(_url = "https://google.com"):
+
+    try:
+        request.urlopen(_url)
+        return True
+    except:
+        return False
